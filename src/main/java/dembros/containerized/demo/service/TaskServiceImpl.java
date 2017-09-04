@@ -25,9 +25,7 @@ public class TaskServiceImpl implements TaskService {
         new RdTask(
             UUID.randomUUID().toString(), request.getDescription(), request.getLimit(), "PENDING");
 
-    rdTaskRepository.save(task);
-
-    return task;
+    return rdTaskRepository.save(task);
   }
 
   @Override
